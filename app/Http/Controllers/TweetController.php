@@ -10,7 +10,7 @@ class TweetController extends Controller
 
     public function index()
     {
-        return Tweet::all()->orderBy('id', 'DESC');
+        return Tweet::orderBy('id', 'DESC')->get();
     }
 
 

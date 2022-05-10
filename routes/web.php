@@ -15,6 +15,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $tweet = Tweet::get();
+    $tweet = Tweet::orderBy('id', 'desc')->get();
     return view('home')->with('tweets', $tweet);
 });
